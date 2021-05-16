@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "./useForm";
-//import { Hello } from "./Hello";
+import { Hello } from "./Hello";
 import { useFetch } from "./useFetch";
 
 const App = () => {
@@ -12,7 +12,6 @@ const App = () => {
   const [count, setCount] = useState(() =>
     JSON.parse(localStorage.getItem("count"))
   );
-  // USE EFFECT IMPORT
   const { data, loading } = useFetch(`http://numbersapi.com/${count}/trivia`);
 
   useEffect(() => {
